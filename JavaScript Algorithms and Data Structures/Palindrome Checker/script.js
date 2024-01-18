@@ -4,20 +4,29 @@ const result = document.getElementById("result");
 // let text = document.getElementById("text-input").value;
 
 function checkPalindrome(txt) {
-  // The purpose of these lines of code is to create a reversed version of the input string that contains only lowercase alphanumeric characters. This will be used for checking if the input string is a palindrome or not
-  // converting all string into lowercase and conaining only alphanumeric values in it
-  const lowerTxt = txt.toLowerCase().match(/[a-z 0-9]/g);
-  // this will join/convert the array into string
-  const oldNewTxt = lowerTxt.join("");
-  // thi will reverse the array and then convert it into a single string
-  const reversedTxt = lowerTxt.reverse().join("");
-  return oldNewTxt === reversedTxt;
+  // // The purpose of these lines of code is to create a reversed version of the input string that contains only lowercase alphanumeric characters. This will be used for checking if the input string is a palindrome or not
+  // // converting all string into lowercase and conaining only alphanumeric values in it
+  // const lowerTxt = txt.toLowerCase().match(/[a-z 0-9]/g);
+  // // this will join/convert the array into string
+  // const oldNewTxt = lowerTxt.join("");
+  // // thi will reverse the array and then convert it into a single string
+  // const reversedTxt = lowerTxt.reverse().join("");
+  // return oldNewTxt === reversedTxt;
+  const cleanedTxt = txt.toLowerCase().replace(/[^a-z0-9]/g, ""); // Remove non-alphanumeric characters and convert to lowercase
+  const reversedTxt = cleanedTxt.split("").reverse().join("");
+
+  return cleanedTxt === reversedTxt;
 }
 
 function checkInput() {
   const text = document.getElementById("text-input").value;
 
-  if (text === "") {
+  // if (text === "") {
+  //   alert("Please input a value");
+  //   return;
+  // }
+  // to ensure that users don't input only whitespaces without any actual characters, using text.trim() === ""
+  if (text.trim() === "") {
     alert("Please input a value");
     return;
   }
