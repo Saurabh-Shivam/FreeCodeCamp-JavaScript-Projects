@@ -1,6 +1,8 @@
 const btn = document.getElementById("convert-btn");
 const output = document.getElementById("output");
 
+output.classList.remove("outputDiv");
+
 let NumAndRoman = [
   { digit: 1000, roman: "M" },
   { digit: 900, roman: "CM" },
@@ -42,12 +44,17 @@ function checkInput() {
 
   if (number === "") {
     output.innerText = "Please Enter a Valid Number";
+    output.classList.add("alert");
   } else if (number < 1) {
     output.innerText = "Please enter a number greater than or equal to 1.";
+    output.classList.add("alert");
   } else if (number > 3999) {
     output.innerText = "Please enter a number less than or equal to 3999.";
+    output.classList.add("alert");
   } else {
     output.innerText = convertRoman(number);
+    output.classList.remove("alert");
+    output.classList.add("outputDiv");
   }
 }
 
