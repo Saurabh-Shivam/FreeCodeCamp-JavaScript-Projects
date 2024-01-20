@@ -27,14 +27,17 @@ function checkInput() {
   if (input) {
     if (checkNumber(input)) {
       result.innerText = `Valid US number: ${input}`;
+      result.classList.add("active");
     } else {
       result.innerText = `Invalid US number: ${input}`;
+      result.classList.add("active");
     }
   }
 }
 
 function hideResult() {
-  console.log("hide result");
+  result.innerText = ""
+  result.classList.remove("active");
 }
 
 btn.addEventListener("click", checkInput);

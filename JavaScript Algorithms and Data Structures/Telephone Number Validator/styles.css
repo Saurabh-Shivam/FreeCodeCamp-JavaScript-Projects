@@ -14,26 +14,29 @@
   gap: 2rem;
   height: 100vh;
   width: 100vw;
-  background-color: #0a0a23;
+  background-color: rgb(150, 150, 175);
+  background-image: url("bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  color: #ffffff;
+  color: #0595a2;
   font-size: 40px;
   text-transform: uppercase;
 }
 
 .input-wrapper {
   background-color: #d0d0d5;
-  width: 30%;
-  height: 40%;
+  width: max-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.8rem;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 0 6px 6px #002ead;
+  box-shadow: 0 6px 6px rgb(58, 105, 232);
 }
 
 h3 {
@@ -72,7 +75,7 @@ h3 {
   width: 70%;
   border: none;
   padding: 14px;
-  background-color: #bfb412;
+  background-color: #12b1bf;
   color: #fff;
   cursor: pointer;
   font-size: 20px;
@@ -80,7 +83,8 @@ h3 {
   border-radius: 10px;
 }
 
-#results-div {
+.ansDiv {
+  display: none;
   background-color: #d0d0d5;
   border: 2px solid #ffffff;
   width: 30%;
@@ -90,6 +94,6 @@ h3 {
   text-align: center;
 }
 
-.hideClass {
-  display: none;
+.active {
+  display: block;
 }
