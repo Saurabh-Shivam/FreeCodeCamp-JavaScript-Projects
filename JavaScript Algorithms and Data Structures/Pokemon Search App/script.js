@@ -5,6 +5,27 @@ const getId = (element) => document.getElementById(`${element}`);
 const input = getId("search-input");
 const btn = getId("search-button");
 
+btn.addEventListener("click", () => {
+  //   clearPokemonData();
+  if (input.value !== "") {
+    getPokeData(url + input.value.toLowerCase());
+  }
+});
+
+input.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      //   clearPokemonData();
+      if (input.value !== "") {
+        e.preventDefault();
+        getPokeData(url + input.value.toLowerCase());
+      }
+    }
+  },
+  false
+);
+
 async function getPokeData(pokeUrl) {
   try {
     const response = await fetch(pokeUrl);
@@ -78,24 +99,3 @@ function clearPokemonData() {
   const type = document.getElementById("types");
   type.innerHTML = "";
 }
-
-btn.addEventListener("click", () => {
-  //   clearPokemonData();
-  if (input.value !== "") {
-    getPokeData(url + input.value.toLowerCase());
-  }
-});
-
-input.addEventListener(
-  "keydown",
-  (e) => {
-    if (e.key === "Enter") {
-      //   clearPokemonData();
-      if (input.value !== "") {
-        e.preventDefault();
-        getPokeData(url + input.value.toLowerCase());
-      }
-    }
-  },
-  false
-);
