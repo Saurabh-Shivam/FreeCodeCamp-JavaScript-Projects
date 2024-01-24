@@ -48,7 +48,7 @@ function renderPokemon(data) {
     const weight = getId("weight");
     const height = getId("height");
     const image = getId("sprite");
-    const type = getId("types");
+    const types = getId("types");
     const hp = getId("hp");
     const attack = getId("attack");
     const defense = getId("defense");
@@ -65,9 +65,9 @@ function renderPokemon(data) {
     // type.innerText = data?.types[0]?.type?.name;
 
     // Reset the innerHTML of the types element
-    type.innerHTML = "";
+    types.innerHTML = "";
     for (let i = 0; i < data?.types.length; i++) {
-      type.innerHTML += `<p id="types">${data.types[i]?.type?.name}</p>`;
+      types.innerHTML += `<span class="type">${data.types[i]?.type?.name}</span>`;
     }
 
     hp.innerText = data?.stats[0]?.base_stat;
