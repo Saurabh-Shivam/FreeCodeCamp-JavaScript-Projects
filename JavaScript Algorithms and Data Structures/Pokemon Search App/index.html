@@ -10,7 +10,7 @@
     <div class="mainContainer">
       <h1>Pokémon Search App</h1>
       <div class="cardContainer">
-        <p>Search for Pokémon Name or ID:</p>
+        <h3>Search for Pokémon Name or ID:</h3>
         <div class="input-wrapper">
           <input type="text" name="" id="search-input" required />
           <button id="search-button" type="submit">Search</button>
@@ -27,28 +27,27 @@
           <div class="imgContainer">
             <img src="" alt="" id="sprite" loading="lazy" />
           </div>
-          <div class="typeContainer">
-            <div id="types"></div>
-          </div>
+            <div id="types" class="typeContainer"></div>
+
         </div>
         <div class="statsContainer">
-          <div class="base-wrapper">
-            <h4>Base</h4>
-            <p>HP:</p>
-            <p>Attack:</p>
-            <p>Defense:</p>
-            <p>Sp. Attack:</p>
-            <p>Sp. Defense:</p>
-            <p>Speed:</p>
+          <div class="stats-wrapper">
+            <h4 class="stats">Base</h4>
+            <p class="stats">HP:</p>
+            <p class="stats">Attack:</p>
+            <p class="stats">Defense:</p>
+            <p class="stats">Sp. Attack:</p>
+            <p class="stats">Sp. Defense:</p>
+            <p class="stats">Speed:</p>
           </div>
           <div class="stats-wrapper">
-            <h4>Stats</h4>
-            <p id="hp"></p>
-            <p id="attack"></p>
-            <p id="defense"></p>
-            <p id="special-attack"></p>
-            <p id="special-defense"></p>
-            <p id="speed"></p>
+            <h4 class="stats">Stats</h4>
+            <p class="stats" id="hp"></p>
+            <p class="stats" id="attack"></p>
+            <p class="stats" id="defense"></p>
+            <p class="stats" id="special-attack"></p>
+            <p class="stats" id="special-defense"></p>
+            <p class="stats" id="speed"></p>
           </div>
         </div>
       </div>

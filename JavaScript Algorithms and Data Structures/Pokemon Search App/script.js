@@ -58,7 +58,7 @@ function renderPokemon(data) {
 
     // updating on UI
     name.innerText = data?.name;
-    id.innerText = data?.id;
+    id.innerText = `#${data?.id}`;
     weight.innerText = `Weight: ${data?.weight}`;
     height.innerText = `Height: ${data?.height}`;
     image.src = `${data?.sprites?.front_default}`;
@@ -67,7 +67,7 @@ function renderPokemon(data) {
     // Reset the innerHTML of the types element
     types.innerHTML = "";
     for (let i = 0; i < data?.types.length; i++) {
-      types.innerHTML += `<span class="type">${data.types[i]?.type?.name}</span>`;
+      types.innerHTML += `<span class="type ${data.types[i]?.type?.name}">${data.types[i]?.type?.name}</span>`;
     }
 
     hp.innerText = data?.stats[0]?.base_stat;

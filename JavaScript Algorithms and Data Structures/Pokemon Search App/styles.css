@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 2rem;
+  min-height: 100%;
+  width: 100vw;
+  padding: 4rem;
+  background-color: #3c5aa6;
+}
+
+h1 {
+  color: #ffcb05;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.cardContainer {
+  background-color: #ececf0;
+  width: 30%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 6px 2px #ffcb05;
+}
+
+h3 {
+  max-width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search-input {
+  height: 5px;
+  width: 100%;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+  border: 2px solid #ffffff;
+  outline: 1px solid black;
+}
+
+#search-input:focus {
+  outline: 3px solid #2a75bb;
+}
+
+#search-button {
+  width: 35%;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #2a75bb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pokeInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 0;
+}
+
+.nameContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.nameContainer p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.weight-heightContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.weight-heightContainer p {
+  font-size: 14px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imgContainer img {
+  width: 180px;
+}
+
+.typeContainer {
+  display: flex;
+  gap: 10px;
+}
+.type {
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #2a75bb;
+  padding: 8px 10px;
+  color: white;
+  border-radius: 6px;
+}
+.grass {
+  background-color: green;
+}
+.poison {
+  background-color: purple;
+}
+.electric {
+  background-color: yellow;
+  color: black;
+}
+.water {
+  background-color: sky#2a75bb;
+}
+.ghost {
+  background-color: black;
+}
+.fire {
+  background-color: red;
+}
+.psychic {
+  background-color: rgb(184, 114, 126);
+}
+.fairy {
+  background-color: pink;
+}
+.rock {
+  background-color: brown;
+}
+.steel {
+  background-color: rgb(120, 117, 117);
+  color: black;
+}
+.ground {
+  background-color: burlywood;
+}
+.fighting {
+  background-color: rgb(79, 38, 38);
+}
+.flying {
+  background-color: silver;
+  color: black;
+}
+.bug {
+  background-color: lightgreen;
+  color: black;
+}
+.dragon {
+  background-color: darkred;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stats {
+  background-color: #2a75bb;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  height: 30px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .cardContainer {
+    width: 80%;
+  }
+
+  #search-button {
+    width: 50%;
+  }
+
+  .typeContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mainContainer {
+    padding: 2rem;
+  }
+
+  .cardContainer {
+    width: 100%;
+  }
+  #search-button {
+    width: 100%;
+  }
+}
