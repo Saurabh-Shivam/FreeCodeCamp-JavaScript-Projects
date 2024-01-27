@@ -4,14 +4,9 @@
   box-sizing: border-box;
 }
 
-:root {
-  --light-gray: #dfdfe2;
-  --dark-blue: #0a0a23;
-}
-
 body {
-  background-color: var(--dark-blue);
-  color: var(--light-gray);
+  background-color: #0a0a23;
+  color: #dfdfe2;
 }
 
 main {
