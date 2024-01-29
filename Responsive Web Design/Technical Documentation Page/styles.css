@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --lightBlack: #4d4e53;
+  --black: #000000;
+  --lightWhite: rgb(233, 226, 226);
+}
+
+/* for navbar section */
+#navbar {
+  position: fixed;
+  display: block;
+  width: 350px;
+  height: 100%;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  float: left;
+  border-right: 2px solid var(--lightBlack);
+}
+
+#navbar header {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.navItems li {
+  border-top: 1px solid var(--lightBlack);
+  padding: 25px;
+  margin-bottom: -25px;
+  text-align: center;
+  cursor: pointer;
+}
+.navItems a {
+  all: unset;
+  font-size: 18px;
+  color: var(--lightBlack);
+}
+
+#main-doc {
+  position: absolute;
+  left: 25rem;
+  padding: 0.5em;
+  overflow: hidden;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--lightBlack);
+}
+
+.main-section header {
+  font-size: 28px;
+  color: var(--black);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.bulletPointContainer {
+  background-color: #ffede0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subContent {
+  margin-top: 1rem;
+}
+
+.codeContent {
+  background-color: var(--black);
+  padding: 1.5rem;
+  color: var(--lightWhite);
+}

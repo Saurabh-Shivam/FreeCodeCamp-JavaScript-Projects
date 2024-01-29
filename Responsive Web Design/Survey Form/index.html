@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="main-container">
+
+      <div class="head">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </div>
+
+      <form action="" id="survey-form">
+        <div class="inpFields">
+          <label for="name" id="name-label">Name</label>
+          <input
+            placeholder="Enter your name"
+            type="text"
+            required
+            name=""
+            id="name"
+          />
+          <label for="email" id="email-label">Email</label>
+          <input
+            placeholder="Enter your Email"
+            type="email"
+            required
+            name=""
+            id="email"
+          />
+          <label for="number" id="number-label">Age</label>
+          <input
+            min="6"
+            max="99"
+            placeholder="Age"
+            type="number"
+            required
+            name=""
+            id="number"
+          />
+        </div>
+
+        <div class="dropDown">
+          <h3>What is your current profession?</h3>
+          <select name="" id="dropdown" required>
+            <option value="" disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="privjob">Private Job</option>
+            <option value="govjob">Government Job</option>
+            <option value="business">Business</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="housewife">House Wife</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="radioButton">
+          <h3>What is your gender?</h3>
+          <div class="radioBtn">
+            <input type="radio" value="male" name="gender" class="rbtn" />
+            <label for="rbtn1">Male</label>
+          </div>
+          <div class="radioBtn">
+            <input type="radio" value="female" name="gender" class="rbtn" />
+            <label for="rbtn2">Female</label>
+          </div>
+          <div class="radioBtn">
+            <input type="radio" value="other" name="gender" class="rbtn" />
+            <label for="rbtn3">Other</label>
+          </div>
+        </div>
+
+        <div class="checkBox">
+          <h3>What would you like in our country to imporve? (Check all that apply)</h3>
+          <div class="check">
+            <input type="checkbox" value="education" name="" class="box" />
+            <label>Education System</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="corruption" name="" class="box" />
+            <label>Corruption</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="poverty" name="" class="box" />
+            <label>Poverty</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="roads" name="" class="box" />
+            <label>Roads</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="reservation" name="" class="box" />
+            <label>Reservation System</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="cleanliness" name="" class="box" />
+            <label">Cleanliness</label>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" value="nothing" name="" class="box" />
+            <label>Everything Is Good</label>
+          </div>
+
+
+        </div>
+
+        <div class="textArea">
+          <h3>Any comments or suggestions?</h3>
+          <textarea
+            placeholder="Enter your comment here..."
+            name=""
+            id="tArea"
+            cols="30"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

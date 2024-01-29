@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title> Technical Documentation Page</title>
+  </head>
+  <body>
+    <div class="mainConatiner">
+      <!-- for navbar section -->
+      <nav id="navbar">
+        <header>DSA Documentation</header>
+        <ul class="navItems">
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li>
+            <a class="nav-link" href="#Applications_of_DSA"
+              >Applications of DSA</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#Environment_Setup">Environment Setup</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Programming_Basics"
+              >Programming Basics</a
+            >
+          </li>
+          <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+          <li><a class="nav-link" href="#Linked_List">Linked List</a></li>
+          <li>
+            <a class="nav-link" href="#Stack_Data_Structure"
+              >Stack Data Structure</a
+            >
+          </li>
+          <li><a class="nav-link" href="#topic_name_7">Topic Name 7</a></li>
+          <li><a class="nav-link" href="#topic_name_8">Topic Name 8</a></li>
+          <li><a class="nav-link" href="#topic_name_9">Topic Name 9</a></li>
+          <li><a class="nav-link" href="#topic_name_10">Topic Name 10</a></li>
+          <li><a class="nav-link" href="#topic_name_11">Topic Name 11</a></li>
+        </ul>
+      </nav>
+
+      <!-- for website main content section -->
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <article class="content">
+            <p>
+              Data Structures are the programmatic way of storing data so that
+              data can be used efficiently. Almost every enterprise application
+              uses various types of data structures in one or the other way.
+              This tutorial will give you a great understanding on Data
+              Structures needed to understand the complexity of enterprise level
+              applications and need of algorithms, and data structures.
+            </p>
+            <h3 class="subContent">Why to Learn DSA?</h3>
+            <p>
+              As applications are getting complex and data rich, there are three
+              common problems that applications face now-a-days.
+            </p>
+            <ul class="bulletPointContainer">
+              <li>
+                Data Search - Consider an inventory of 1 million(106) items of a
+                store. If the application is to search an item, it has to search
+                an item in 1 million(106) items every time slowing down the
+                search. As data grows, search will become slower.
+              </li>
+              <li>
+                Process speed - Processor speed although being very high, falls
+                limited if the data grows to billion records.
+              </li>
+              <li>
+                Multiple Requests - As thousands of users can search data
+                simultaneously on a web server, even the fast server fails while
+                searching the data.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="Applications_of_DSA">
+          <header>Applications of DSA</header>
+          <article class="content">
+            <p>
+              Algorithm is a step-by-step procedure, which defines a set of
+              instructions to be executed in a certain order to get the desired
+              output. Algorithms are generally created independent of underlying
+              languages, i.e. an algorithm can be implemented in more than one
+              programming language.
+            </p>
+            <p>
+              From the data structure point of view, following are some
+              important categories of algorithms -
+            </p>
+            <ul class="bulletPointContainer">
+              <li>Search - Algorithm to search an item in a data structure.</li>
+              <li>Sort - Algorithm to sort items in a certain order.</li>
+              <li>Insert - Algorithm to insert item in a data structure.</li>
+              <li>
+                Update - Algorithm to update an existing item in a data
+                structure.
+              </li>
+              <li>
+                Delete - Algorithm to delete an existing item from a data
+                structure.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="Environment_Setup">
+          <header>Environment Setup</header>
+          <article class="content">
+            <p>
+              If you are still willing to set up your environment for C
+              programming language, you need the following two tools available
+              on your computer, (a) Text Editor and (b) The C Compiler.
+            </p>
+
+            <h3 class="subContent">Text Editor</h3>
+            <p>
+              This will be used to type your program. Examples of few editors
+              include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS,
+              and vim or vi.
+            </p>
+            <p>
+              The name and the version of the text editor can vary on different
+              operating systems. For example, Notepad will be used on Windows,
+              and vim or vi can be used on Windows as well as Linux or UNIX.
+            </p>
+
+            <p>
+              The files you create with your editor are called source files and
+              contain program source code. The source files for C programs are
+              typically named with the extension ".c".
+            </p>
+
+            <p>
+              Before starting your programming, make sure you have one text
+              editor in place and you have enough experience to write a computer
+              program, save it in a file, compile it, and finally execute it.
+            </p>
+
+            <h3 class="subContent">The C Compiler</h3>
+            <p>
+              The source code written in the source file is the human readable
+              source for your program. It needs to be "compiled", to turn into
+              machine language so that your CPU can actually execute the program
+              as per the given instructions.
+            </p>
+            <p>
+              This C programming language compiler will be used to compile your
+              source code into a final executable program. We assume you have
+              the basic knowledge about a programming language compiler.
+            </p>
+
+            <p>
+              Most frequently used and free available compiler is GNU C/C++
+              compiler. Otherwise, you can have compilers either from HP or
+              Solaris if you have respective Operating Systems (OS).
+            </p>
+
+            <p>
+              The following section guides you on how to install GNU C/C++
+              compiler on various OS. We are mentioning C/C++ together because
+              GNU GCC compiler works for both C and C++ programming languages.
+            </p>
+
+            <h3 class="subContent">Installation on Windows</h3>
+            <p>
+              To install GCC on Windows, you need to install MinGW. To install
+              MinGW, go to the MinGW homepage,
+              <a style="all: unset; color: blue" href="www.mingw.org">
+                www.mingw.org,</a
+              >
+              and follow the link to the MinGW download page. Download the
+              latest version of the MinGW installation program, which should be
+              named MinGW-&lt;version&gt;.exe.
+            </p>
+            <h2>
+              NOTE: Programming language is never a barrier in learning DSA.
+            </h2>
+          </article>
+        </section>
+
+        <section class="main-section" id="Programming_Basics">
+          <header>Programming Basics</header>
+          <article class="content">
+            <p>
+              To get started with DSA learn basics of Programming, open the VS
+              Code and write your first "Hello world" C code:
+            </p>
+            <code class="codeContent">
+                #include &lt;stdio.h&gt; <br />
+                int main(){ <br />
+                printf("Hello World"); <br />
+                return 0; <br />
+                }
+            </code>
+            <h3 class="subContent">Variables</h3>
+            <p>
+              You use variables as symbolic names for values in your
+              application. The names of variables, called identifiers, conform
+              to certain rules.
+            </p>
+            <p>
+              In C, identifier must start with a letter, underscore (_), or
+              dollar sign ($); subsequent characters can also be digits (0-9).
+              Because JavaScript is case sensitive, letters include the
+              characters "A" through "Z" (uppercase) and the characters "a"
+              through "z" (lowercase)
+            </p>
+            <h3 class="subContent">Declaring variables</h3>
+            <code class="codeContent">
+              int num = 57; <br />
+              char ch = 'A'; <br />
+              float decimal_num = 45.7; <br />
+            </code>
+
+            <h3 class="subContent">if...else statement</h3>
+            <p>
+              Use the if statement to execute a statement if a logical condition
+              is true. Use the optional else clause to execute a statement if
+              the condition is false. An if statement looks as follows:
+            </p>
+            <code class="codeContent">>
+              if (condition) { statement_1; } else { statement_2; }
+            </code>
+            <p>
+              You may also compound the statements using else if to have
+              multiple conditions tested in sequence, as follows:
+            </p>
+            <code class="codeContent">>
+              if (condition_1) { statement_1; } <br />
+              else if (condition_2) { statement_2; } <br />
+              else if (condition_n) { statement_n; } <br />
+              else { statement_last; }
+            </code>
+          </article>
+        </section>
+
+        <section class="main-section" id="Arrays">
+          <header>Arrays</header>
+          <article class="content">
+            <p>
+              Array is a type of linear data structure that is defined as a
+              collection of elements with same or different data types. They
+              exist in both single dimension and multiple dimensions. These data
+              structures come into picture when there is a necessity to store
+              multiple elements of similar nature together at one place.
+            </p>
+            <br />
+            <p>
+              The difference between an array index and a memory address is that
+              the array index acts like a key value to label the elements in the
+              array. However, a memory address is the starting address of free
+              memory available.
+            </p>
+
+            <h4>Syntax</h4>
+            <p>Creating an array in C and C++ programming languages -</p>
+            <code class="codeContent">>
+              data_type array_name[array_size]={elements separated by commas}
+              <br />
+              //or <br />
+              data_type array_name[array_size]; <br />
+            </code>
+            <p>Creating an array in Java programming language -</p>
+
+            <code class="codeContent">>
+              data_type[] array_name = {elements separated by commas} <br />
+              //or, <br />
+              data_type array_name = new data_type[array_size];
+            </code>
+            <h5>
+              NOTE: Programming language is never a barrier in learning DSA.
+            </h5>
+          </article>
+        </section>
+
+        <section class="main-section" id="Linked_List">
+          <header>Linked List</header>
+          <article class="content">
+            <p>
+              If arrays accommodate similar types of data types, linked lists
+              consist of elements with different data types that are also
+              arranged sequentially. <br />
+              But how are these linked lists created? <br />
+              A linked list is a collection of "nodes" connected together via
+              links. These nodes consist of the data to be stored and a pointer
+              to the address of the next node within the linked list. In the
+              case of arrays, the size is limited to the definition, but in
+              linked lists, there is no defined size. Any amount of data can be
+              stored in it and can be deleted from it.
+            </p>
+            <p>There are three types of linked lists -</p>
+            <ul class="bulletPointContainer">
+              <li>
+                Singly Linked List - The nodes only point to the address of the
+                next node in the list.
+              </li>
+              <li>
+                Doubly Linked List - The nodes point to the addresses of both
+                previous and next nodes.
+              </li>
+              <li>
+                Circular Linked List - The last node in the list will point to
+                the first node in the list. It can either be singly linked or
+                doubly linked.
+              </li>
+            </ul>
+            <h5>NOTE: Programming language is never a barrier in learning DSA.</h5>
+          </article>
+        </section>
+
+        <section class="main-section" id="Stack_Data_Structure">
+          <header>Stack Data Structure</header>
+          <article class="content">
+            <p>
+              A stack is an Abstract Data Type (ADT), that is popularly used in
+              most programming languages. It is named stack because it has the
+              similar operations as the real-world stacks, for example - a pack
+              of cards or a pile of plates, etc
+            </p>
+            <p>
+              The stack follows the LIFO (Last in - First out) structure where
+              the last element inserted would be the first element deleted.
+            </p>
+            <h3>Basic Operations on Stacks</h3>
+            <p>
+              Stack operations usually are performed for initialization, usage
+              and, de-initialization of the stack ADT.
+            </p>
+            <p>
+              The most fundamental operations in the stack ADT include: push(),
+              pop(), peek(), isFull(), isEmpty(). These are all built-in
+              operations to carry out data manipulation and to check the status
+              of the stack.
+            </p>
+            <p>
+              Stack uses pointers that always point to the topmost element
+              within the stack, hence called as the top pointer.
+            </p>
+            <h3>Insertion: push()</h3>
+            <p>
+              The push() is an operation that inserts elements into the stack.
+              The following is an algorithm that describes the push() operation
+              in a simpler way.
+            </p>
+            <h4>Algorithm</h4>
+            <code class="codeContent">>
+              <p>
+                1. Checks if the stack is full. <br />
+                2. If the stack is full, produces an error and exit. <br />
+                3. If the stack is not full, increments top to point next empty
+                space. <br />
+                4. Adds data element to the stack location, where top is
+                pointing. <br />
+                5. Returns success.
+              </p>
+            </code>
+          </article>
+        </section>
+
+        <section class="main-section" id="topic_name_7">
+          <header>Topic Name 7</header>
+          <article class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              sapiente adipisci harum quae distinctio quibusdam, iste
+              accusantium! Laudantium rem ipsa quaerat. Temporibus ab reiciendis
+              laudantium est aliquam commodi illum accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              perferendis similique minima?
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="topic_name_8">
+          <header>Topic Name 8</header>
+          <article class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              sapiente adipisci harum quae distinctio quibusdam, iste
+              accusantium! Laudantium rem ipsa quaerat. Temporibus ab reiciendis
+              laudantium est aliquam commodi illum accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              perferendis similique minima?
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="topic_name_9">
+          <header>Topic Name 9</header>
+          <article class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              sapiente adipisci harum quae distinctio quibusdam, iste
+              accusantium! Laudantium rem ipsa quaerat. Temporibus ab reiciendis
+              laudantium est aliquam commodi illum accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              perferendis similique minima?
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="topic_name_10">
+          <header>Topic Name 10</header>
+          <article class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              sapiente adipisci harum quae distinctio quibusdam, iste
+              accusantium! Laudantium rem ipsa quaerat. Temporibus ab reiciendis
+              laudantium est aliquam commodi illum accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              perferendis similique minima?
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="topic_name_11">
+          <header>Topic Name 11</header>
+          <article class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              sapiente adipisci harum quae distinctio quibusdam, iste
+              accusantium! Laudantium rem ipsa quaerat. Temporibus ab reiciendis
+              laudantium est aliquam commodi illum accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              perferendis similique minima?
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+<arti class="content" cle> </arti>

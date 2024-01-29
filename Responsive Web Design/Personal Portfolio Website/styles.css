@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.mainContainer {
+  position: relative;
+}
+
+/* navbar section */
+#navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  padding: 20px;
+  padding-right: 50px;
+  justify-content: flex-end;
+  gap: 3rem;
+  background-color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  color: #8e3dd4;
+}
+
+#navbar a:hover {
+  border-bottom: 2px solid #8e3dd4;
+  padding-bottom: 6px;
+}
+
+/* welcome section */
+#welcome-section {
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#welcome-section h1 {
+  font-size: 52px;
+  color: black;
+}
+
+#welcome-section h3 {
+  font-size: 20px;
+  color: #8e3dd4;
+}
+
+/* project section */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 1rem;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.projectContainer {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.project-tile {
+  font-size: 28px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.projectContainer p {
+  padding: 6px;
+  font-size: 16px;
+}
+
+.projectContainer a {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #8e3dd4;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: rgb(244, 240, 240);
+}
+
+.projectContainer a:hover {
+  color: white;
+}
+
+/* contact section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid rgb(36, 36, 36);
+  height: 30vh;
+  margin-top: 5rem;
+}
+
+.contactSection h2 {
+  font-size: 30px;
+}
+
+.socialLink {
+  display: flex;
+  gap: 30px;
+}
+
+.socialLink a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(32, 30, 30);
+}
+
+.socialLink a:hover {
+  color: #8e3dd4;
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+  #navbar {
+    padding: 1.5rem 3rem;
+     justify-content: center;
+  }
+
+  #welcome-section h1{
+    margin-left: 5rem;
+  }
+
+  #projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #contact {
+    margin-bottom: 12px;
+  }
+
+}
