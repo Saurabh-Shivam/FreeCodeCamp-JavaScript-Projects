@@ -39,6 +39,7 @@ function App() {
   //   setCurrentSound(audio);
   // }
   function playSound(selector) {
+    // here we are getting the audio element inside drumPad element
     const audio = document.getElementById(selector);
     // console.log(selector);
     // console.log(audio);
@@ -46,10 +47,12 @@ function App() {
     setActiveKey(selector);
   }
   return (
-    <div>
-      <div id="drum-machine">
-        <div id="display">{activeKey}</div>
-        <div>
+    <div className="flex flex-wrap bg-gray-500 h-screen items-center justify-center">
+      <div
+        id="drum-machine"
+        className="border-8 border-blue-300 rounded-md h-92 w-[42%] flex justify-between p-6"
+      >
+        <div className="border-2 border-red-300 grid grid-cols-3 gap-4 p-6 w-80 h-72">
           {drumPads.map((drumPad) => (
             <div
               key={drumPad.text}
@@ -57,7 +60,7 @@ function App() {
                 playSound(drumPad.text);
                 // playSound(drumPad.src);
               }}
-              className="drum-pad"
+              className="drum-pad border-2 border-white text-white border-dotted flex justify-center items-center py-2 px-4 text-2xl cursor-pointer hover:bg-blue-200 transition-all ease-in hover:border-none hover:border-white"
               id={drumPad.keyCode}
             >
               {drumPad.text}
@@ -68,6 +71,13 @@ function App() {
               ></audio>
             </div>
           ))}
+        </div>
+
+        <div
+          className="text-3xl font-bold border-2 border-red-300 text-white rounded-md w-[30%] h-16 flex items-center justify-center mt-auto mb-auto"
+          id="display"
+        >
+          {activeKey}
         </div>
       </div>
     </div>
