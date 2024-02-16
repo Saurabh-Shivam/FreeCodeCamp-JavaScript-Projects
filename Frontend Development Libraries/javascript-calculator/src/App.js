@@ -17,7 +17,7 @@ function App() {
     setValue(value + " " + operator + " ");
   }
 
-  function decimalHandler() {
+  function decimalHandler() { 
     const arr = value.split(" ");
     const lastElem = arr[arr.length - 1];
 
@@ -35,15 +35,15 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="flex justify-center items-center h-screen">
       <div
         id="container"
-        className="flex flex-col gap-4 justify-center items-center h-screen"
+        className="flex flex-wrap flex-col w-[25%]"
       >
-        <div id="display">{value}</div>
+        <div className="text-2xl text-center p-2 mt-2 border-2 border-red-400 border-b-0" id="display">{value}</div>
         <div
           id="btns"
-          className="grid grid-cols-4 gap-4 p-2 border-2 border-black"
+          className="grid grid-cols-4 gap-4 p-4 border-2 border-black"
         >
           <button id="clear" onClick={clearHandler}>
             AC
